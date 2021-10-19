@@ -8,11 +8,19 @@ $email = $_GET['email'];
 
 
 
-if (strlen($name) > 3 && is_numeric($age) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    echo 'ACCESSO RIUSCITO';
-}elseif (!filter_var($email, FILTER_VALIDATE_EMAIL) && $email != '') {
-    echo 'ACCESSO NEGATO, Inserisci un email valida';
+
+if ($name != '' && $age != '' && $email != ''){
+
+    if (strlen($name) > 3 && is_numeric($age) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo 'ACCESSO RIUSCITO';
+    }else {
+        echo 'ACCESSO NEGATO';
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL) && $email != '' ){
+            echo 'inserisci una mail valida';
+        } 
+    }
 }
+
 
 ?>
 
