@@ -9,16 +9,16 @@ $email = $_GET['email'];
 
 
 
-if ($name != '' && $age != '' && $email != ''){
-
-    if (strlen($name) > 3 && is_numeric($age) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo 'ACCESSO RIUSCITO';
-    }else {
-        echo 'ACCESSO NEGATO';
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL) && $email != '' ){
-            echo 'inserisci una mail valida';
-        } 
-    }
+if ( empty($name) || empty($age) || empty($email) ){
+    echo 'inserisci i dati per accedere';
+} elseif (strlen($name) < 4) { 
+    echo 'ACCESSO NEGATO, nome deve contenere almeno 4 caratteri';
+} elseif (!is_numeric($age)) {
+    echo 'ACCESSO NEGATO, età deve essere un numero';
+} elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)){
+    echo 'ACCESSO NEGATO, sintassi email non corretta';
+} else{
+    echo 'ACCESSO RIUSCITO';
 }
 
 

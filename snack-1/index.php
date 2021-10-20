@@ -66,7 +66,7 @@ $matches = [
         <?php for ($i = 0; $i < count($matches); $i++){ ?>
             <ul>
                 <li>
-                    <?php   echo " {$matches[$i]['home']} - {$matches[$i]['guest']}  | {$matches[$i]['home_points']}-{$matches[$i]['guest_points']} " ?>
+                    <?php   echo " {$matches[$i]['home']} - {$matches[$i]['guest']} | {$matches[$i]['home_points']}-{$matches[$i]['guest_points']} " ?>
                 </li>
             </ul>
 
