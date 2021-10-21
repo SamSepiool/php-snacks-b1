@@ -3,7 +3,7 @@
 function average ($arr){
     $sum = array_sum($arr);
     $average = $sum / count($arr);
-    return $average;
+    return round($average,1);
 }
 
 ?>
