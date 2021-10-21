@@ -2,7 +2,8 @@
 
 function average ($arr){
     $sum = array_sum($arr);
-    return $sum;
+    $average = $sum / count($arr);
+    return $average;
 }
 
 ?>

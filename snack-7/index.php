@@ -55,14 +55,7 @@ $classe= [
 
 ];
 
-
-function average ($arr){
-    $sum = array_sum($arr);
-    $average = $sum / count($arr);
-    return $average;
-}
-
-
+include __DIR__ .'/functions/functions.php';
 
 
 ?>
